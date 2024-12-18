@@ -1,0 +1,159 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #00bcd4, #1e1e1e); /* Electric blue gradient */
+    color: #fff;
+    animation: backgroundAnimation 8s ease-in-out infinite; /* Dynamic background animation */
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #00ff99; /* Neon green for a techy look */
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Products Section */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.product {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    background-color: #222; /* Darker hover state for tech feel */
+}
+
+/* Product Title and Price */
+.product h3 {
+    margin-bottom: 10px;
+    color: #00ff99; /* Neon green */
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.product p {
+    margin-bottom: 10px;
+    color: #bbb;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+    padding: 12px 25px;
+    background-color: #ff4081; /* Bright neon pink */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.add-to-cart:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #ff4081, #ff80ab);
+    opacity: 0.2;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #f50057;
+    transform: scale(1.1);
+}
+
+.add-to-cart:hover:before {
+    opacity: 0.4;
+}
+
+/* Cart Section */
+.cart {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+#place-order {
+    padding: 15px 30px;
+    background-color: #00bcd4; /* Electric blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+#place-order:hover {
+    background-color: #00acc1; /* Slightly darker blue */
+    transform: scale(1.1);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, #00bcd4, #1e1e1e); }
+    50% { background: linear-gradient(135deg, #ff4081, #1e1e1e); }
+    100% { background: linear-gradient(135deg, #00bcd4, #1e1e1e); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product {
+        width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: 100%;
+    }
+}

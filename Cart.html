@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="Cart.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Shopping Cart</h1>
+
+        <div class="products">
+            <div class="product">
+                <h3>TELEVISION</h3>
+                <p>Price: $200000</p>
+                <button class="add-to-cart" onclick="addToCart('TELEVISION', 200000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>MOBILE PHONE</h3>
+                <p>Price: $30000</p>
+                <button class="add-to-cart" onclick="addToCart('MOBILE PHONE', 30000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>SPEAKER</h3>
+                <p>Price: $5000</p>
+                <button class="add-to-cart" onclick="addToCart('SPEAKER', 5000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>LAPTOP</h3>
+                <p>Price: $100000</p>
+                <button class="add-to-cart" onclick="addToCart('LAPTOP', 100000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>CONSOLE</h3>
+                <p>Price: $6000</p>
+                <button class="add-to-cart" onclick="addToCart('CONSOLE', 6000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>TABLET</h3>
+                <p>Price: $80000</p>
+                <button class="add-to-cart" onclick="addToCart('TABLET', 80000)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="total">0</span></p>
+            <button id="place-order" onclick="placeOrder()">Place Order</button>
+        </div>
+    </div>
+
+    <script src="Cart.js"></script>
+</body>
+</html>
