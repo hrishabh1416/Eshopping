@@ -1,0 +1,182 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  background-image: url('https://via.placeholder.com/1920x1080?text=Electronics+Cinematic+Background');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+/* Header Styles */
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header .logo h1 {
+  margin: 0;
+  font-size: 30px;
+  letter-spacing: 2px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 20px;
+  transition: transform 0.3s;
+}
+
+nav ul li:hover {
+  transform: scale(1.1);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  color: #ff6347;
+}
+
+/* Hero Section with Background and Animation */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  animation: fadeInUp 1.5s ease-out;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+}
+
+.hero h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  animation: slideUp 1s ease-out;
+}
+
+.hero p {
+  font-size: 22px;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  animation: pulse 2s infinite;
+}
+
+.hero button:hover {
+  background-color: #ff6347;
+}
+
+/* Featured Categories with Animation */
+.featured {
+  text-align: center;
+  margin-top: 50px;
+  animation: fadeInUp 2s ease-out;
+}
+
+.featured h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  animation: slideUp 1.5s ease-out;
+}
+
+.category {
+  margin: 0 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.category img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.category:hover img {
+  transform: scale(1.1);
+}
+
+.category p {
+  margin-top: 10px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.category:hover p {
+  color: #ff6347;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px 0;
+  margin-top: 50px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
